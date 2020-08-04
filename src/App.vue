@@ -1,28 +1,34 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header/>
+    <Main/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Header from './components/Header';
+import Main from './components/Main';
+import axios from 'axios';
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+    components: {
+    Header,
+    Main
+  },
+  analisarImagem: function() {
+            console.log(axios)
+            //.post('https://prhwuofqm2.execute-api.us-east-1.amazonaws.com/dev/api', image.src)
+        }
+  
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+  body {
+    background-color: #1C1C1C;
+    font-family: Quicksand, sans-serif;
+    text-align: center;
+  }
+
 </style>
