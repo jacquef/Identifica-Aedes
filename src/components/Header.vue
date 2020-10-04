@@ -13,12 +13,11 @@ export default {
 
 <style scoped>
     .container-header {
-        
+        margin-top: 35px;
     }
 
     .title-header {
         color: #2E8B57;
-       
         text-transform: uppercase;
         font-size: 32px;
     }

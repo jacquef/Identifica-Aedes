@@ -81,7 +81,7 @@ export default {
 <style scoped>
     p {
         color: white;
-        
+        margin: 25px 0;
     }
 
     label {
@@ -89,7 +89,6 @@ export default {
         border-radius: 10px;
         color: white;
         cursor: pointer;
-        margin: 12px;
         padding: 6px 20px;
     }
 
@@ -97,9 +96,10 @@ export default {
         display: none;
     }
 
-    img {
-        height: 300px;
-        padding-top: 20px;
+    img {   
+        height: auto;
+        width: 90%;
+        margin-top: 30px;
     }
 
     button {
@@ -108,10 +108,16 @@ export default {
         border-radius: 10px;
         color: white;
         cursor: pointer;
-        margin: 25px auto;
         padding: 6px 20px;
         font-family: 'Quicksand', sans-serif;
         font-size: 16px;
-        display: block;
+        display: flex;
+        margin: 25px auto;
+    }
+
+    @media screen and (min-width: 992px) {
+        img {
+            width: 60%;
+        }
     }
 </style>
