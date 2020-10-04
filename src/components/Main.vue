@@ -81,7 +81,7 @@ export default {
 <style scoped>
     p {
         color: white;
-        margin-top: 30px;
+        
     }
 
     label {
