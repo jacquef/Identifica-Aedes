@@ -79,6 +79,10 @@ export default {
 </script>
 
 <style scoped>
+    div {
+        height: 100vh;
+    }
+
     p {
         color: white;
         margin: 25px 0;
