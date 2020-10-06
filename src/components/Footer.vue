@@ -2,47 +2,49 @@
     <div class="container-footer">
         <div class="sobre">
             <h3>Sobre o Projeto</h3>
-            <p><a href="#">Detalhes de Uso</a></p>
-            <p><a href="#">Requisitos Mínimos</a></p>
-            <p>Data da última atualização: Out/2020</p>
+            <span><a href="#">Detalhes de Uso</a></span>
+            <span><a href="#">Requisitos Mínimos</a></span>
+            <span>Data da última atualização: Out/2020</span>
         </div>
         <div class="contato">
-            <h3>Contato</h3>            
-            <div class="integrantes">
-                <p>Bruno Palma </p>
-                <div class="integrantes__links">
-                    <img class="git-img" src="./../assets/github.png">
-                    <img class="lkdn-img" src="./../assets/linkedin.png">
+            <h3>Contato</h3>    
+            <div class="container-integrantes">        
+                <div class="integrantes">
+                    <p>Bruno Palma </p>
+                    <div class="integrantes__links">
+                        <img class="git-img" src="./../assets/github.png">
+                        <img class="lkdn-img" src="./../assets/linkedin.png">
+                    </div>
                 </div>
-            </div>
-            <div class="integrantes">
-                <p>Jacqueline Souza</p>
-                <div class="integrantes__links">
-                    <img class="git-img" src="./../assets/github.png">
-                    <img class="lkdn-img" src="./../assets/linkedin.png">
+                <div class="integrantes">
+                    <p>Jacqueline Souza</p>
+                    <div class="integrantes__links">
+                        <img class="git-img" src="./../assets/github.png">
+                        <img class="lkdn-img" src="./../assets/linkedin.png">
+                    </div>
                 </div>
-            </div>
-            <div class="integrantes">
-                <p>Juan Portugal</p>
-                <div class="integrantes__links">
-                    <img class="git-img" src="./../assets/github.png">
-                    <img class="lkdn-img" src="./../assets/linkedin.png">
+                <div class="integrantes">
+                    <p>Juan Portugal</p>
+                    <div class="integrantes__links">
+                        <img class="git-img" src="./../assets/github.png">
+                        <img class="lkdn-img" src="./../assets/linkedin.png">
+                    </div>
                 </div>
-            </div>
-            <div class="integrantes">
-                <p>Vinícius Ferreira</p>
-                <div class="integrantes__links">
-                    <img class="git-img" src="./../assets/github.png">
-                    <img class="lkdn-img" src="./../assets/linkedin.png">
+                <div class="integrantes">
+                    <p>Vinícius Ferreira</p>
+                    <div class="integrantes__links">
+                        <img class="git-img" src="./../assets/github.png">
+                        <img class="lkdn-img" src="./../assets/linkedin.png">
+                    </div>
                 </div>
-            </div>
-            <div class="integrantes">
-                <p>Willian Inocêncio</p>
-                <div class="integrantes__links">
-                    <img class="git-img" src="./../assets/github.png">
-                    <img class="lkdn-img" src="./../assets/linkedin.png">
-                </div>
-            </div>         
+                <div class="integrantes">
+                    <p>Willian Inocêncio</p>
+                    <div class="integrantes__links">
+                        <img class="git-img" src="./../assets/github.png">
+                        <img class="lkdn-img" src="./../assets/linkedin.png">
+                    </div>
+                </div>  
+            </div>       
         </div>
     </div>
 </template>
@@ -65,6 +67,8 @@ export default {
 
     .sobre {
         padding: 0 20px;
+        display: flex;
+        flex-direction: column;
     }
 
     .contato {
@@ -75,9 +79,11 @@ export default {
         color: #2E8B57;
         font-size: 18px;
         margin-bottom: 10px;
+        text-transform: uppercase;
+        
     }
 
-    p, a {
+    p, a, span {
         font-size: 14px;
         color: #DCDCDC;
         letter-spacing: 1px;
@@ -100,6 +106,40 @@ export default {
         width: 20px;
         height: auto;
         margin-left: 10px;
+    }
+
+    @media screen and (min-width: 992px) {
+        .sobre {
+            display: block;
+            text-align: start;
+            padding: 0 40px;
+        }
+
+        span {
+            margin-right: 25px;
+        }
+
+        p {
+            margin-top: 0;
+        }
+
+        .contato {
+            text-align: start;
+            padding: 0 40px;
+        }
+
+        .container-integrantes {
+            display: flex;
+            justify-content: start; 
+        }
+
+        .integrantes {
+            margin-right: 45px;
+        }
+
+        .integrantes__links {
+            text-align: center;
+        }
     }
 
    
