@@ -121,7 +121,7 @@ export default {
 
     @media screen and (min-width: 992px) {
         img {
-            width: 60%;
+            width: 40%;
         }
     }
 </style>

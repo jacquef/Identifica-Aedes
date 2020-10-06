@@ -1,6 +1,6 @@
 <template>
     <div class="container-header">
-        <h1 class="title-header"> Identifica Aedes </h1>
+        <img src="./../assets/Logotipo.png" class="logo"> 
     </div>
 </template>
 
@@ -12,15 +12,17 @@ export default {
 </script>
 
 <style scoped>
-    .container-header {
-        margin-top: 35px;
+    .logo {
+        width: 200px;
+        height: auto;
+        margin-top: 15px;
     }
 
-    .title-header {
-        color: #2E8B57;
-        text-transform: uppercase;
-        font-size: 32px;
+   @media screen and (min-width: 992px) {
+        .logo {
+            width: 300px;
+            margin-top: 0;
+        }
     }
-
     
 </style>
