@@ -13,35 +13,35 @@
                     <p>Bruno Palma </p>
                     <div class="integrantes__links">
                         <img class="git-img" src="./../assets/github.png">
-                        <img class="lkdn-img" src="./../assets/linkedin.png">
+                        <img class="lkdn-img" src="./../assets/linkedin.png" @click="redirectLinkedin('bruno-p-490b3a137')">
                     </div>
                 </div>
                 <div class="integrantes">
                     <p>Jacqueline Souza</p>
                     <div class="integrantes__links">
-                        <img class="git-img" src="./../assets/github.png">
-                        <img class="lkdn-img" src="./../assets/linkedin.png">
+                        <img class="git-img" src="./../assets/github.png" @click="redirectGit('jacquef')">
+                        <img class="lkdn-img" src="./../assets/linkedin.png" @click="redirectLinkedin('jacqueline-souza-6a9638197')">
                     </div>
                 </div>
                 <div class="integrantes">
                     <p>Juan Portugal</p>
                     <div class="integrantes__links">
                         <img class="git-img" src="./../assets/github.png">
-                        <img class="lkdn-img" src="./../assets/linkedin.png">
+                        <img class="lkdn-img" src="./../assets/linkedin.png" @click="redirectLinkedin('juan-fernandes-a40a40155')">
                     </div>
                 </div>
                 <div class="integrantes">
                     <p>Vinícius Ferreira</p>
                     <div class="integrantes__links">
-                        <img class="git-img" src="./../assets/github.png">
-                        <img class="lkdn-img" src="./../assets/linkedin.png">
+                        <img class="git-img" src="./../assets/github.png" @click="redirectGit('vinicius182')">
+                        <img class="lkdn-img" src="./../assets/linkedin.png" @click="redirectLinkedin('vinicius-fd')">
                     </div>
                 </div>
                 <div class="integrantes">
-                    <p>Willian Inocêncio</p>
+                    <p>Willian Inocencio</p>
                     <div class="integrantes__links">
-                        <img class="git-img" src="./../assets/github.png">
-                        <img class="lkdn-img" src="./../assets/linkedin.png">
+                        <img class="git-img" src="./../assets/github.png" @click="redirectGit('winocencio')">
+                        <img class="lkdn-img" src="./../assets/linkedin.png" @click="redirectLinkedin('willian-inocencio')">
                     </div>
                 </div>  
             </div>       
@@ -52,7 +52,16 @@
 <script>
 
 export default {
-    
+    data(){
+    },
+    methods: {
+        redirectGit(user) {
+            window.open(`http://github.com/${user}`, '_blank');
+        },
+        redirectLinkedin(user) {
+            window.open(`https://linkedin.com/in/${user}/`, '_blank');
+        }
+    }
 }
 </script>
 
@@ -100,12 +109,14 @@ export default {
         width: 20px;
         height: auto;
         margin-right: 10px;
+        cursor: pointer;
     }
 
     .lkdn-img {
         width: 20px;
         height: auto;
         margin-left: 10px;
+        cursor: pointer;
     }
 
     @media screen and (min-width: 992px) {

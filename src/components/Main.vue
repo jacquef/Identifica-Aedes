@@ -7,6 +7,7 @@
             <img id="img" :src="previewImage">
             <p v-if="showContagem">Foram encontrados {{this.contagem}} ovos.</p>
             <button v-if="showButton" id="btn-analisa" @click="prepararEnvioImagem">Analisar</button>
+            <button v-if="showButtonLoading" disabled><i class="fa fa-circle-o-notch fa-spin"></i> Analisar</button>
             <button v-if="showButtonDownload" itype="submit" @click="downloadImagem">Download</button>
         </div>    
     </div>    
@@ -24,7 +25,8 @@ export default {
             base64Image: null,
             showContagem: false,
             contagem: null,
-            showButtonDownload: false
+            showButtonDownload: false,
+            showButtonLoading: false,
         }
     },
 
@@ -47,6 +49,8 @@ export default {
             leitor.readAsDataURL(this.image);
         },
         analisarImagem(base64Image) {
+            this.showButton = false;
+            this.showButtonLoading = true;
             const headers = {
                 'Content-Type': 'application/json'
             }
@@ -65,7 +69,7 @@ export default {
                 this.contagem = result.quantidadeOvos;
                 this.previewImage = result.urlImage;
                 this.showContagem = true;
-                this.showButton = false;
+                this.showButtonLoading = false;
                 this.showButtonDownload = true;
             })
         },
@@ -80,7 +84,7 @@ export default {
 
 <style scoped>
     div {
-        height: 100vh;
+        height: 100%;
     }
 
     p {
@@ -112,11 +116,16 @@ export default {
         border-radius: 10px;
         color: white;
         cursor: pointer;
-        padding: 6px 20px;
+        padding: 12px 24px;
         font-family: 'Quicksand', sans-serif;
         font-size: 16px;
         display: flex;
         margin: 25px auto;
+    }
+
+    .fa {
+        margin-left: -12px;
+        margin-right: 8px;
     }
 
     @media screen and (min-width: 992px) {
