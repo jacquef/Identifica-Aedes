@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="main">
         <p>Selecione a imagem para ser analisada</p>
         <label for="file">Escolher</label>
         <div>
@@ -7,7 +7,7 @@
             <img id="img" :src="previewImage">
             <p v-if="showContagem">Foram encontrados {{this.contagem}} ovos.</p>
             <button v-if="showButton" id="btn-analisa" @click="prepararEnvioImagem">Analisar</button>
-            <button v-if="showButtonLoading" disabled><i class="fa fa-circle-o-notch fa-spin"></i> Analisar</button>
+            <button v-if="showButtonLoading" disabled><i class="fa fa-circle-o-notch fa-spin"></i> Analisando</button>
             <button v-if="showButtonDownload" itype="submit" @click="downloadImagem">Download</button>
         </div>    
     </div>    
@@ -82,9 +82,10 @@ export default {
 }
 </script>
 
-<style scoped>
-    div {
-        height: 100%;
+<style scoped>    
+
+    .main {
+        height: auto;
     }
 
     p {
@@ -105,8 +106,8 @@ export default {
     }
 
     img {   
-        height: auto;
         width: 90%;
+        height: auto;
         margin-top: 30px;
     }
 
@@ -130,7 +131,8 @@ export default {
 
     @media screen and (min-width: 992px) {
         img {
-            width: 40%;
+            width: auto;
+            height: 500px;
         }
     }
 </style>

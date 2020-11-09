@@ -72,6 +72,7 @@ export default {
         flex-direction: column;
         background-color: black;
         padding: 50px 0;
+        margin-top: 100px;
     }
 
     .sobre {
