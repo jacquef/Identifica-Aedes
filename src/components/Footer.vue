@@ -12,7 +12,7 @@
                 <div class="integrantes">
                     <p>Bruno Palma </p>
                     <div class="integrantes__links">
-                        <img class="git-img" src="./../assets/github.png">
+                        <img class="git-img" src="./../assets/github.png" @click="redirectGit('BrunoGPalma')">
                         <img class="lkdn-img" src="./../assets/linkedin.png" @click="redirectLinkedin('bruno-p-490b3a137')">
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                 <div class="integrantes">
                     <p>Juan Portugal</p>
                     <div class="integrantes__links">
-                        <img class="git-img" src="./../assets/github.png">
+                        <img class="git-img" src="./../assets/github.png" @click="redirectGit('JuanPortual99')">
                         <img class="lkdn-img" src="./../assets/linkedin.png" @click="redirectLinkedin('juan-fernandes-a40a40155')">
                     </div>
                 </div>
