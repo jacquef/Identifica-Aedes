@@ -2,9 +2,8 @@
     <div class="container-footer">
         <div class="sobre">
             <h3>Sobre o Projeto</h3>
-            <span><a href="#">Detalhes de Uso</a></span>
-            <span><a href="#">Requisitos Mínimos</a></span>
-            <span>Data da última atualização: Out/2020</span>
+            <span><a href="https://s3.amazonaws.com/identificaaedes.ml/Requisitos+m%C3%ADnimos.pdf" target="_blank">Detalhes de Uso e Requisitos Mínimos</a></span>
+            <span>Data da última atualização: Nov/2020</span>
         </div>
         <div class="contato">
             <h3>Contato</h3>    
